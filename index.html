@@ -4,10 +4,74 @@
 <head>
     <!-- TODO: Include Font Awesome file here -->
     <!-- TODO: Include Google Fonts file here -->
+    <link href="https://fonts.googleapis.com/css?family=Montez&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/index.css"></link>
+    <link rel="stylesheet" href="./styles/common.css"></link>
 </head>
 
 <body>
     <!-- TODO: Include all your code for the header and home page here -->
+    <header>
+        <div id="scribbler-title-container">
+            <div id="scribbler-title">
+                ScriBBler
+            </div>
+            <div id="scribbler-subheading">
+                Explore, Imagine, Create
+            </div>
+        </div>
+        <div id="scribbler-action">
+            <button id="signUp">
+                Sign Up
+            </button>
+            <button id="signIn">
+                Sign In
+            </button>
+        </div>
+    </header>
+
+    <!-- The Modal -->
+    <div id="signUpModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="modal-title">Get Started</div>    
+                <div class="close" id="closeSignUp">&times;</div>
+            </div>
+            <hr>
+            <div class="modal-form">
+                <form>
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" placeholder="Enter your username" required>
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Re-enter your username" required>
+                    <button id="signUpButton" type="submit">
+                        Sign Up
+                    </button>
+                </form>
+            </div>
+            
+        </div>
+      
+    </div>
+
+    <main>
+        <div id="button-container">
+            <button>
+                All Posts
+            </button>
+            <button>
+                Create Post
+            </button>
+        </div>
+    </main>
+    <script src="./scripts/common.js"></script>
 </body>
 
 </html>

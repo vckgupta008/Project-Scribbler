@@ -1,0 +1,56 @@
+body {
+  padding: 0px;
+  background-image: url(../images/background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
+#scribbler-title-container {
+  display: flex;
+  flex-direction: column;
+}
+
+#scribbler-title {
+  font-family: "Montez", cursive;
+  color: blue;
+  font-size: 24px;
+}
+#scribbler-subheading {
+  font-family: "Ubuntu Mono", monospace;
+  font-size: 12px;
+}
+
+#scribbler-action > button {
+  padding: 7px 12px;
+  background-color: blue;
+  color: #ffffff;
+  margin-left: 10px;
+  border-left: 0;
+  border-top: 0;
+  cursor: pointer;
+}
+
+#button-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#button-container > button {
+  padding: 7px 12px;
+  background-color: #cfb53b;
+  margin-left: 10px;
+  border: 1px solid;
+  border-left-color: wheat;
+  border-top-color: wheat;
+  cursor: pointer;
+  border-bottom-color: grey;
+  border-right-color: grey;
+  color: darkslategrey;
+}
