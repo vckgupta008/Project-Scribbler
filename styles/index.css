@@ -5,36 +5,6 @@ body {
   background-size: cover;
 }
 
-header {
-  display: flex;
-  justify-content: space-between;
-}
-
-.scribbler-title-container {
-  display: flex;
-  flex-direction: column;
-}
-
-.scribbler-title {
-  font-family: "Montez", cursive;
-  color: blue;
-  font-size: 24px;
-}
-.scribbler-subheading {
-  font-family: "Ubuntu Mono", monospace;
-  font-size: 12px;
-}
-
-.scribbler-action > button {
-  padding: 7px 12px;
-  background-color: blue;
-  color: #ffffff;
-  margin-left: 10px;
-  border-left: 0;
-  border-top: 0;
-  cursor: pointer;
-}
-
 .button-container {
   position: absolute;
   top: 50%;
@@ -53,4 +23,44 @@ header {
   border-bottom-color: grey;
   border-right-color: grey;
   color: darkslategrey;
+}
+#createPostModal > .modal-content {
+    width: 80%;
+    height: 75%;
+  }
+
+#createPostModal >.modal-content>.modal-form {
+    height: 85%;
+}
+
+#createPostModal >.modal-content>.modal-form > form {
+    height: -webkit-fill-available;
+}
+
+
+textarea {
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  padding: 10px;
+  box-sizing: border-box;
+  background-color: #f1f1f1;
+  border: none;
+  height: 350px
+}
+
+textarea::placeholder {
+  color: #8a8887;
+  font-weight: 600;
+  font-size: 13px;
+  font-family: sans-serif;
+}
+
+#createPostButton{
+    padding: 10px;
+    background-color: #5eb762;
+    color: #fff;
+    border: none;
+    font-size: 15px;
+    cursor: pointer;
 }
