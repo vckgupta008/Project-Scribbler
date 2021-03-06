@@ -44,6 +44,16 @@ let yesDeleteButton = document.getElementById("yesDeleteButton");
 let noDeleteButton = document.getElementById("noDeleteButton");
 let deleteConfirmModal = document.getElementById("confirmDeleteModal");
 
+yesDeleteButton.onclick = function() {
+  postList = postList.filter(post => post.id != selectedId);
+  createPostList(postList);
+  deleteConfirmModal.style.display = "none";
+};
+
+noDeleteButton.onclick = function() {
+  deleteConfirmModal.style.display = "none";
+};
+
 createPostList(postList);
 
 function createPostList(postList) {
@@ -82,12 +92,10 @@ function deletePost(id) {
   deleteConfirmModal.style.display = "block";
 }
 
-yesDeleteButton.onclick = function() {
-  postList = postList.filter(post => post.id != selectedId);
-  createPostList(postList);
-  deleteConfirmModal.style.display = "none";
-};
-
-noDeleteButton.onclick = function() {
-  deleteConfirmModal.style.display = "none";
-};
+function editPost(editedPost) {
+  sessionStorage.setItem(
+    "post",
+    JSON.stringify(postList.filter(post => post.id == editedPost))
+  );
+  location.href = "../html/post.html";
+}

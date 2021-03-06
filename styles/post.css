@@ -1,0 +1,41 @@
+.scribbler-subheading {
+  color: #8a5ca4;
+}
+
+.post-body {
+  margin-top: 15px;
+  padding: 30px;
+  font-family: sans-serif;
+}
+.post-title {
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+}
+.post-subheading {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.post-user {
+  font-family: "Ubuntu Mono", monospace;
+}
+.post-action > button {
+  background-color: #ed2562;
+  color: #ffffff;
+  border: 0;
+  padding: 7px 15px;
+  box-shadow: 0px 6px 6px #eca8bd;
+}
+
+.post-action > button > i {
+  vertical-align: -2px;
+  font-size: 16px;
+}
+
+.post-information {
+    margin-top: 10px;
+    font-family: unset;
+    font-size: 13px;
+}
