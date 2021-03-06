@@ -38,13 +38,19 @@ let postList = [
   }
 ];
 
+var selectedId = null;
+
+let yesDeleteButton = document.getElementById("yesDeleteButton");
+let noDeleteButton = document.getElementById("noDeleteButton");
+let deleteConfirmModal = document.getElementById("confirmDeleteModal");
+
 createPostList(postList);
 
 function createPostList(postList) {
   let listElement = document.getElementsByClassName("post-list")[0];
-  let listItem='';
+  let listItem = "";
   postList.map(item => {
-    listItem+= `
+    listItem += `
       <div class="post-item">
       <div class="post-user">
               ${item.user}
@@ -68,12 +74,20 @@ function createPostList(postList) {
   </div>
       `;
   });
-  listElement.innerHTML=listItem;
+  listElement.innerHTML = listItem;
 }
 
-// let nextId = 5;
-
-function deletePost(id){
-    postList = postList.filter(post=> post.id!=id);
-    createPostList(postList);
+function deletePost(id) {
+  this.selectedId = id;
+  deleteConfirmModal.style.display = "block";
 }
+
+yesDeleteButton.onclick = function() {
+  postList = postList.filter(post => post.id != selectedId);
+  createPostList(postList);
+  deleteConfirmModal.style.display = "none";
+};
+
+noDeleteButton.onclick = function() {
+  deleteConfirmModal.style.display = "none";
+};
