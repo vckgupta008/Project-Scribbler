@@ -94,7 +94,7 @@ function deletePost(id) {
 
 function editPost(editedPost) {
   sessionStorage.setItem(
-    "post",
+    "post-user",
     JSON.stringify(postList.filter(post => post.id == editedPost))
   );
   location.href = "../html/post.html";
