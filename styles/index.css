@@ -25,18 +25,17 @@ body {
   color: darkslategrey;
 }
 #createPostModal > .modal-content {
-    width: 80%;
-    height: 75%;
-  }
-
-#createPostModal >.modal-content>.modal-form {
-    height: 85%;
+  width: 80%;
+  height: 75%;
 }
 
-#createPostModal >.modal-content>.modal-form > form {
-    height: -webkit-fill-available;
+#createPostModal > .modal-content > .modal-form {
+  height: 85%;
 }
 
+#createPostModal > .modal-content > .modal-form > form {
+  height: -webkit-fill-available;
+}
 
 textarea {
   width: 100%;
@@ -46,7 +45,12 @@ textarea {
   box-sizing: border-box;
   background-color: #f1f1f1;
   border: none;
-  height: 350px
+  height: 350px;
+}
+
+textarea:required,
+textarea:invalid {
+  box-shadow: none;
 }
 
 textarea::placeholder {
@@ -56,16 +60,16 @@ textarea::placeholder {
   font-family: sans-serif;
 }
 .footer {
-    width: 100%;
-    margin-top: 5px;
-    display: flex;
-    justify-content: center;
+  width: 100%;
+  margin-top: 5px;
+  display: flex;
+  justify-content: center;
 }
-#createPostButton{
-    padding: 10px 30px;
-    background-color: #5eb762;
-    color: #fff;
-    border: none;
-    font-size: 15px;
-    cursor: pointer;
+#createPostButton {
+  padding: 10px 30px;
+  background-color: #5eb762;
+  color: #fff;
+  border: none;
+  font-size: 15px;
+  cursor: pointer;
 }

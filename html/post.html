@@ -16,135 +16,13 @@
 <body>
     <!-- TODO: Include code for header here -->
     <header>
-        <div class="scribbler-title-container">
-            <div class="scribbler-title">
-                ScriBBler
-            </div>
-            <div class="scribbler-subheading">
-                Explore, Imagine, Create
-            </div>
-        </div>
-        <div class="scribbler-action">
-            <button id="signUp">
-                Sign Up
-            </button>
-            <button id="signIn">
-                Sign In
-            </button>
-        </div>
-    </header>
-    
-    <!-- The Sign up modal -->
-    <div id="signUpModal" class="modal">
 
-        <!-- Modal content -->
-        <div class="modal-content">
-            <div class="modal-header">
-                <div class="modal-title">Get Started</div>    
-                <div class="close" id="closeSignUp">&times;</div>
-            </div>
-            <hr>
-            <div class="modal-form">
-                <form action="#" method="post" onsubmit="return signUpUser()">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
-                    <label for="username">Username</label>
-                    <input type="text" id="username" name="username" placeholder="Enter your username" required>
-                    <label for="password">Password</label>
-                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
-                    <label for="confirmPassword">Confirm Password</label>
-                    <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Re-enter your username" required>
-                    <button id="signUpButton" type="submit" >
-                        Sign Up
-                    </button>
-                </form>
-            </div>
-            
-        </div>
+    </header>
+
+    <div class="post-body">
         
     </div>
 
-
-    <!-- The Sign In Modal -->
-    <div id="signInModal" class="modal">
-
-            <!-- Modal content -->
-        <div class="modal-content">
-            <div class="modal-header">
-                <div class="modal-title">Welcome Back!</div>    
-                <div class="close" id="closeSignIn">&times;</div>
-            </div>
-            <hr>
-            <div class="modal-form">
-                <form action="#" method="post" onsubmit="return signInUser()">
-                    <label for="usernameSignIn">Username</label>
-                    <input type="text" id="usernameSignIn" name="usernameSignIn" placeholder="Enter your username" required>
-                    <label for="passwordSignIn">Password</label>
-                    <input type="password" id="passwordSignIn" name="passwordSignIn" placeholder="Enter your password" required>
-                    <button id="signInButton" type="submit" >
-                        Sign In
-                    </button>
-                    <div class="form-info">
-                        <span id="signUpText">Not a member?</span>
-                        <span id="signUpLink">Sign Up</span>
-                    </div>
-                </form>
-            </div>
-            
-        </div>
-            
-    </div>
-
-    <div class="post-body">
-        <!-- <div class="post-title">
-                What is linting and how can it save you time?
-        </div>
-        <div class="post-subheading">
-            <div class="post-user">
-                Shristi Gupta
-            </div>
-            <div class="post-action">
-                <button>
-                    Edit <i class="fa fa-edit"></i>
-                </button>  
-            </div>
-        </div>
-        <div class="post-information">
-                Since JavaScript does not have any type-checking, either of these keywords can be used to declare a variable of any type (datatype) in JavaScript. Though all the three keywords are used for the same purpose, they are different.
-                Since JavaScript does not have any type-checking, either of these keywords can be used to declare a variable of any type (datatype) in JavaScript. Though all the three keywords are used for the same purpose, they are different.
-                Since JavaScript does not have any type-checking, either of these keywords can be used to declare a variable of any type (datatype) in JavaScript. Though all the three keywords are used for the same purpose, they are different.
-        </div>
-        <div class="post-like">
-            <button id="likeButton">
-                <i class="fa fa-thumbs-up"></i> Like
-            </button>
-        </div>
-        <div class="post-like-text">
-            Be the first one to like this!
-        </div>
-        <textarea id="postComment" placeholder="Leave a comment...">
-
-        </textarea>
-        <div>
-            <button id=postCommentButton>
-                Comment
-            </button>
-        </div>
-        <div class="comment-title">
-            All Comments
-        </div>
-        <div class="comment-list">
-            <div class="comments-item">
-               All the best      
-            </div>
-            <div class="comments-item">
-                All the best      
-            </div>
-        </div> -->
-
-    </div>
-
-    
     <!-- list of all posts ends here -->
     <script src="../scripts/post.js"></script>
     <script src="../scripts/common.js"></script>

@@ -1,9 +1,10 @@
+//Static Post list
 let postList = [
   {
     id: 1,
     user: "Srishti Gupta",
     postLikes: 0,
-    comments:[],
+    comments: [],
     title: "'let' me be a 'const'(ant), not a 'var'(iable)!",
     info:
       "Since JavaScript does not have any type-checking, either of these keywords can be used to declare a variable of any type (datatype) in JavaScript. Though all the three keywords are used for the same purpose, they are different."
@@ -12,7 +13,7 @@ let postList = [
     id: 2,
     user: "Colby Fayock",
     postLikes: 0,
-    comments:[],
+    comments: [],
     title: "What is linting and how can it save you time?",
     info:
       "One of the biggest challenges in software development is time. It's something we can't easily get more of, but linting can help us make the most out of the time we have."
@@ -21,7 +22,7 @@ let postList = [
     id: 3,
     user: "Yazeed Bzadough",
     postLikes: 0,
-    comments:[],
+    comments: [],
     title: "How to Get More Views on Your Tech Blog",
     info:
       "If you're a developer with a Twitter account, you've already seen everyone and their cat start a blog, YouTube channel, or Patreon. We all want to become stars, or at the very least, a recognizable name in the industry."
@@ -30,7 +31,7 @@ let postList = [
     id: 4,
     user: "Cedd Burge",
     postLikes: 0,
-    comments:[],
+    comments: [],
     title: "How to write easily describable code",
     info:
       "When code is not describable using words, most people have to do some mental mapping to turn it in to words. This wastes mental energy, and you run the risk of getting the mapping wrong. Different people will map to different words, which" +
@@ -40,7 +41,7 @@ let postList = [
     id: 5,
     user: "Srishti Gupta",
     postLikes: 0,
-    comments:[],
+    comments: [],
     title: "Everything you should know about 'module' & 'require' in Node.js",
     info:
       "Node.js treats each JavaScript file as a separate module. For instance, if you have a file containing some code and this file is named xyz.js, then this file is treated as a module in Node, and you can say that you've created a module" +
@@ -54,18 +55,21 @@ let yesDeleteButton = document.getElementById("yesDeleteButton");
 let noDeleteButton = document.getElementById("noDeleteButton");
 let deleteConfirmModal = document.getElementById("confirmDeleteModal");
 
+//On click of delete button, updating the post list and reprinting
 yesDeleteButton.onclick = function() {
   postList = postList.filter(post => post.id != selectedId);
   createPostList(postList);
   deleteConfirmModal.style.display = "none";
 };
 
+//Closing the confirm delete modal
 noDeleteButton.onclick = function() {
   deleteConfirmModal.style.display = "none";
 };
 
 createPostList(postList);
 
+//Printing the post list data
 function createPostList(postList) {
   let listElement = document.getElementsByClassName("post-list")[0];
   let listItem = "";
@@ -97,11 +101,13 @@ function createPostList(postList) {
   listElement.innerHTML = listItem;
 }
 
+//Storing the id of the post to be deleted in future
 function deletePost(id) {
   this.selectedId = id;
   deleteConfirmModal.style.display = "block";
 }
 
+//Storing the selected post in session storage to be accessed in post informatio page
 function editPost(editedPost) {
   sessionStorage.setItem(
     "post-user",

@@ -3,7 +3,7 @@ body {
 }
 
 .modal {
-    padding: unset;
+  padding: unset;
 }
 
 .modal-content {
@@ -13,40 +13,40 @@ body {
   transform: translate(-50%, -50%);
   width: 350px;
 }
-.modal-header {
-    justify-content: center;
+.confirm-header {
+  justify-content: center;
 }
 
 .modal-header > .modal-title {
-    color: unset;
-    font-size: 18px;
+  color: unset;
+  font-size: 18px;
 }
 
 .modal-footer {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
 }
 
 .modal-footer > button {
-    padding: 7px 12px;
-    color: #ffffff;
-    cursor: pointer;
+  padding: 7px 12px;
+  color: #ffffff;
+  cursor: pointer;
 }
 
 .scribbler-subheading {
-    color: #8a5ca4;
+  color: #8a5ca4;
 }
 
 #yesDeleteButton {
-    background-color: #5eb762;
-    margin-left: 6px;
-    border: 0;
+  background-color: #5eb762;
+  margin-left: 6px;
+  border: 0;
 }
 #noDeleteButton {
-    background-color: #d13939;
-    margin-right: 9px;
-    border: 0;
+  background-color: #d13939;
+  margin-right: 9px;
+  border: 0;
 }
 
 .post-body {
@@ -61,8 +61,8 @@ body {
 
 .post-item {
   display: flex;
-  /* width: %; */
-  width: 570px;
+  /* width: 580px; */
+  width: 40%;
   margin-bottom: 25px;
   border: 0;
   border-radius: 12px;
@@ -71,11 +71,7 @@ body {
 }
 
 .post-item:hover {
-    box-shadow: 0px 10px 20px #ab9d9e;
-}
-
-.post-item:nth-child(2n) {
-  /* margin-left: 3%;; */
+  box-shadow: 0px 10px 20px #ab9d9e;
 }
 
 .post-user {
@@ -87,6 +83,7 @@ body {
   border-radius: 10px 0px 0px 10px;
   color: #707076;
   font-weight: bold;
+  padding: 0px 10px;
 }
 .post-detail {
   padding: 16px;

@@ -1,3 +1,4 @@
+//Getting post user info from session storage
 let userInfo = JSON.parse(sessionStorage.getItem("post-user"));
 console.log(userInfo);
 var editPost = "",
@@ -6,17 +7,21 @@ var editPost = "",
   inputTitle = "",
   postInformation = "",
   inputInformation = "";
+
+//Printing the post information
 printUserInfo(userInfo);
 
+//Function to print post information
 function printUserInfo(userInfo) {
   let postBody = document.getElementsByClassName("post-body")[0];
   let postInfo = "";
   userInfo.map(user => {
     let userComments = "";
+    //Fetching user comment on the post
     if (user.comments.length) {
-        user.comments.forEach(comment => {
-            userComments += `<div class="comments-item">${comment}</div>`;
-        })
+      user.comments.forEach(comment => {
+        userComments += `<div class="comments-item">${comment}</div>`;
+      });
     }
     postInfo = `
         <h3 class="post-title">
@@ -79,7 +84,7 @@ function printUserInfo(userInfo) {
             All Comments
         </div>
         ${
-            user.comments.length
+          user.comments.length
             ? `
             <div class="comment-list">
                 ${userComments}
@@ -92,7 +97,9 @@ function printUserInfo(userInfo) {
   postBody.innerHTML = postInfo;
   editPost = document.getElementById("editPost");
   savePost = document.getElementById("savePost");
+  //Adding click event when user click on edit post
   editPost.addEventListener("click", editPage);
+  //Adding click event when user click on save post
   savePost.addEventListener("click", saveEditPost);
   postTitle = document.getElementsByClassName("post-title")[0];
   inputTitle = document.getElementsByClassName("input-title")[0];
@@ -104,6 +111,7 @@ function printUserInfo(userInfo) {
 let likeButton = document.getElementById("likeButton");
 let postLikeText = document.getElementsByClassName("post-like-text")[0];
 
+//Setting the page in edit mode
 function editPage() {
   editPost.style.display = "none";
   savePost.style.display = "block";
@@ -113,19 +121,23 @@ function editPage() {
   inputInformation.style.display = "block";
 }
 
+//Saving the page after edit
 function saveEditPost() {
   console.log(inputTitle.value);
   console.log(inputInformation.value);
   userInfo[0].title = inputTitle.value;
   userInfo[0].info = inputInformation.value;
+  //Printing the page with updated user info
   printUserInfo(userInfo);
 }
 
+//Function to increase likes and update the user information followed by printing it 
 function increaseLike() {
   userInfo[0].postLikes++;
   printUserInfo(userInfo);
 }
 
+//Function to push the comments in the user info and printing it
 function postComments() {
   let textAreaComment = document.getElementById("postComment");
   if (textAreaComment.value) {

@@ -130,3 +130,10 @@ header {
     color: #3934ff;
     cursor: pointer;
 }
+
+.modal-form input:required {
+    box-shadow:none;
+}
+.modal-form input:invalid {
+    box-shadow:none;
+}
