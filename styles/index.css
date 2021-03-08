@@ -46,6 +46,7 @@ textarea {
   background-color: #f1f1f1;
   border: none;
   height: 350px;
+  font-family: sans-serif;
 }
 
 textarea:required,

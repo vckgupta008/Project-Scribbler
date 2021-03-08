@@ -36,7 +36,7 @@ let headerTemplate = `
                 <label for="password">Password</label>
                 <input type="password" id="password" name="password" placeholder="Enter your password" required>
                 <label for="confirmPassword">Confirm Password</label>
-                <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Re-enter your username" required>
+                <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Re-enter your password" required>
                 <button id="signUpButton" type="submit" >
                     Sign Up
                 </button>
@@ -75,7 +75,7 @@ let headerTemplate = `
 `;
 
 //Adding header tempplate in common js to be utilised in every html page
-document.getElementsByTagName('header')[0].innerHTML=headerTemplate;
+document.getElementsByTagName("header")[0].innerHTML = headerTemplate;
 
 // Get the button that opens the signUp modal
 var signUpBtn = document.getElementById("signUp");

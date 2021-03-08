@@ -131,7 +131,7 @@ function saveEditPost() {
   printUserInfo(userInfo);
 }
 
-//Function to increase likes and update the user information followed by printing it 
+//Function to increase likes and update the user information followed by printing it
 function increaseLike() {
   userInfo[0].postLikes++;
   printUserInfo(userInfo);
